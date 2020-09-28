@@ -58,7 +58,7 @@ namespace ECommerce.Api.Products.Tests
         public async Task GetProductReturnsProductUsingInvalidId()
         {
             var options = new DbContextOptionsBuilder<ProductsDbContext>()
-                .UseInMemoryDatabase(nameof(GetProductReturnsProductUsingValidId))
+                .UseInMemoryDatabase(nameof(GetProductReturnsProductUsingInvalidId))
                 .Options;
             var dbContext = new ProductsDbContext(options);
             CreateProducts(dbContext);
